@@ -1,0 +1,18 @@
+# ctrl + spacebar
+name: My workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on:  ubuntu-latest
+        steps:
+        - name: welcome msg
+          run: echo "Hello Gh Actions !!"
+        
+        - name: Disk file usage
+          run: df -h
+
+        - name: list files
+          run: ls -lrt
+
