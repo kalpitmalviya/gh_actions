@@ -1,0 +1,25 @@
+name: Test cnfiguration var
+
+# This section defines on which events the workflow should run
+on:
+  push:
+    branches: [ "main" ]  # Run workflow on push to the main branch
+  pull_request:
+    branches: [ "main" ]  # Run workflow on pull requests targeting the main branch
+
+  #allows you to run manually from action tab
+  workflow_dispatch:
+
+jobs:
+  greetings:  # Defining a job named 'compile'
+  
+    # Specifies the runner environment: latest Ubuntu available in GitHub-hosted runners
+    runs-on: ubuntu-latest
+    env:
+      myvar: Hello
+
+    steps:
+    - name: Say hello 
+      run: echo "$myvar $first_name using cloud with project ${{ vars.PROJECT_ID }}"
+      env:
+        first_name: abhi
