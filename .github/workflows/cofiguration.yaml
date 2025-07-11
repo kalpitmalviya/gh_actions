@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  greetings:  # Defining a job named 'compile'
+  Build:  # Defining a job named 'compile'
   
     # Specifies the runner environment: latest Ubuntu available in GitHub-hosted runners
     runs-on: ubuntu-latest
