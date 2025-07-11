@@ -20,6 +20,6 @@ jobs:
 
     steps:
     - name: Say hello 
-      run: echo "$myvar $first_name using cloud with project ${{ vars.PROJECT_ID }}"
+      run: echo "$myvar $first_name using cloud with project ${{ vars.PROJECT_IDD }}"
       env:
         first_name: abhi
